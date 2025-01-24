@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Platformer2D.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\Platformer2DEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\AnimationComponent.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\CharacterGameComponent.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\FallingInteraction.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\ParentActorInteraction.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2D.init.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DCharacter.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DGM.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DPC.gen.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2D.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\AnimationComponent.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\CharacterGameComponent.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\FallingInteraction.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\ParentActorInteraction.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DCharacter.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DGM.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Platformer2DPC.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\TestCreation.cpp.obj"
+"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\Default.rc2.res"
+/OUT:"C:\Users\liam_\OneDrive\Desktop\Unreal Projects\2DPlatformerUE5\Platformer2D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer2D\UnrealEditor-Platformer2D.lib"

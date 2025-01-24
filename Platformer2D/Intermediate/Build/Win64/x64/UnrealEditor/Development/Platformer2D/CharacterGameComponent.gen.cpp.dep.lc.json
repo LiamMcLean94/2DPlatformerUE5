@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\liam_\\onedrive\\desktop\\unreal projects\\2dplatformerue5\\platformer2d\\intermediate\\build\\win64\\unrealeditor\\inc\\platformer2d\\uht\\charactergamecomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\liam_\\onedrive\\desktop\\unreal projects\\2dplatformerue5\\platformer2d\\intermediate\\build\\win64\\x64\\platformer2deditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\liam_\\onedrive\\desktop\\unreal projects\\2dplatformerue5\\platformer2d\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\platformer2d\\definitions.platformer2d.h",
+            "c:\\users\\liam_\\onedrive\\desktop\\unreal projects\\2dplatformerue5\\platformer2d\\source\\platformer2d\\public\\charactergamecomponent.h",
+            "c:\\users\\liam_\\onedrive\\desktop\\unreal projects\\2dplatformerue5\\platformer2d\\intermediate\\build\\win64\\unrealeditor\\inc\\platformer2d\\uht\\charactergamecomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
