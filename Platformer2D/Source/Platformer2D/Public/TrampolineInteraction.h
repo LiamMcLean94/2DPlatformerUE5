@@ -13,7 +13,6 @@ UCLASS()
 class PLATFORMER2D_API ATrampolineInteraction : public AParentActorInteraction
 {
 	GENERATED_BODY()
-
 	ATrampolineInteraction();
 
 protected:
@@ -37,15 +36,14 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Platformer2D|Interaction")
 	void BoxBeginOverlapped(
-		UPrimitiveComponent* OverlappedComp,
-		AActor* OtherActor,
-		UPrimitiveComponent* OtherComp,
-		int32 OtherBodyIndex,
-		bool bFromSweep,
-		const FHitResult& SweepResult);
+	   UPrimitiveComponent* OverlappedComp,
+	   AActor* OtherActor,
+	   UPrimitiveComponent* OtherComp,
+	   int32 OtherBodyIndex,
+	   bool bFromSweep,
+	   const FHitResult& SweepResult);
 
 	void ResetTrampoline();
+
 	
 };
-
-

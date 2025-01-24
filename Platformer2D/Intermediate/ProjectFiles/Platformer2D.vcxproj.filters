@@ -48,7 +48,31 @@
     <ClCompile Include="..\..\Source\Platformer2D\Private\CharacterGameComponent.cpp">
       <Filter>Source\Platformer2D\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\CheckpointInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\DeathComponent.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\EnemyBase.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\EnemySimple.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer2D\Private\FallingInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\GemInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\HealthComponent.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\LadderInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\MovingInteraction.cpp">
       <Filter>Source\Platformer2D\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Platformer2D\Private\ParentActorInteraction.cpp">
@@ -63,10 +87,22 @@
     <ClCompile Include="..\..\Source\Platformer2D\Private\Platformer2DPC.cpp">
       <Filter>Source\Platformer2D\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\PlayerStatWidget.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\ProjectileComponent.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\SpikeInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer2D\Private\TestCreation.cpp">
       <Filter>Source\Platformer2D\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Platformer2D\Private\TrampolineInteraction.cpp">
+      <Filter>Source\Platformer2D\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer2D\Private\TurretInteraction.cpp">
       <Filter>Source\Platformer2D\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Platformer2D\Public">
@@ -78,7 +114,31 @@
     <ClInclude Include="..\..\Source\Platformer2D\Public\CharacterGameComponent.h">
       <Filter>Source\Platformer2D\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\CheckpointInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\DeathComponent.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\EnemyBase.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\EnemySimple.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Platformer2D\Public\FallingInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\GemInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\HealthComponent.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\LadderInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\MovingInteraction.h">
       <Filter>Source\Platformer2D\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Platformer2D\Public\ParentActorInteraction.h">
@@ -93,10 +153,22 @@
     <ClInclude Include="..\..\Source\Platformer2D\Public\Platformer2DPC.h">
       <Filter>Source\Platformer2D\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\PlayerStatWidget.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\ProjectileComponent.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\SpikeInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Platformer2D\Public\TestCreation.h">
       <Filter>Source\Platformer2D\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Platformer2D\Public\TrampolineInteraction.h">
+      <Filter>Source\Platformer2D\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer2D\Public\TurretInteraction.h">
       <Filter>Source\Platformer2D\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -47,6 +47,7 @@ public:
 	bool RunAnimation();
 	bool JumpAnimation();
 	bool FallAnimation();
+	bool ClimbAnimation();
 	bool AttackAnimation();
 	bool DeadAnimation();
 

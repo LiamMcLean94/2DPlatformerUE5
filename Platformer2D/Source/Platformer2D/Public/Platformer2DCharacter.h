@@ -27,6 +27,12 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Landed(const FHitResult& Hit) override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+	virtual float TakeDamage(
+		float DamageAmount,
+		struct FDamageEvent const& DamageEvent,
+		class AController* EventInstigator,
+		AActor* DamageCauser)
+	override;
 
 private:
 	UPROPERTY(VisibleAnywhere, Category="Platformer2D|Actor Component")
@@ -39,6 +45,10 @@ private:
 	class UCharacterGameComponent* CharacterGameComponent;
 	UPROPERTY(VisibleAnywhere, Category="Platformer2D|Actor Component")
 	class UAnimationComponent* AnimationComponent;
+	UPROPERTY(VisibleAnywhere, Category="Platformer2D|Actor Component")
+	class UDeathComponent* DeathComponent;
+	UPROPERTY(VisibleAnywhere, Category="Platformer2D|Actor Component")
+	class UHealthComponent* HealthComponent;
 
 protected:
 	virtual void PawnClientRestart() override;
@@ -48,6 +58,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Controls|Input Actions")
 	UInputAction* JumpAction;
 	UPROPERTY(EditDefaultsOnly, Category="Controls|Input Actions")
+	UInputAction* ClimbAction;
+	UPROPERTY(EditDefaultsOnly, Category="Controls|Input Actions")
 	UInputMappingContext* InputMappingContext;
 	UPROPERTY(EditDefaultsOnly, Category="Controls|Input Actions")
 	int32 InputMappingPriority = 0;
@@ -55,7 +67,9 @@ protected:
 public:
 	void EnhancedMove(const FInputActionValue& Value);
 	void EnhancedJump(const FInputActionValue& Value);
+	void EnhancedClimb(const FInputActionValue& Value);
 #pragma endregion
 };
+
 
 

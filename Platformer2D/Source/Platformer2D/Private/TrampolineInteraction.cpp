@@ -1,16 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Platformer2D/Public/TrampolineInteraction.h"
-#include "PaperSprite.h"
-#include "Platformer2DCharacter.generated.h"
+#include "TrampolineInteraction.h"
+
+#include "PaperSpriteComponent.h"
 #include "Components/BoxComponent.h"
-//#include "TrampolineInteraction.generated.h"
 
 ATrampolineInteraction::ATrampolineInteraction()
 {
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
 	BoxComponent->SetupAttachment(PaperSprite);
+
 }
 
 void ATrampolineInteraction::BeginPlay()
@@ -20,6 +20,7 @@ void ATrampolineInteraction::BeginPlay()
 	{
 		BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ATrampolineInteraction::BoxBeginOverlapped);
 	}
+
 }
 
 void ATrampolineInteraction::BoxBeginOverlapped(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
@@ -31,7 +32,7 @@ void ATrampolineInteraction::BoxBeginOverlapped(UPrimitiveComponent* OverlappedC
 	}
 	if (OtherActor == PlayerCharacter && (OtherActor != this))
 	{
-		PlayerCharacter->LaunchCharacer(LaunchVelocity, false, true);
+		PlayerCharacter->LaunchCharacter(LaunchVelocity, false, true);
 
 		if (SpriteTrampolineLineUp)
 		{
@@ -39,11 +40,10 @@ void ATrampolineInteraction::BoxBeginOverlapped(UPrimitiveComponent* OverlappedC
 			GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ATrampolineInteraction::ResetTrampoline, Duration, false);
 		}
 	}
-	
+
 }
 
 void ATrampolineInteraction::ResetTrampoline()
 {
 	PaperSprite->SetSprite(SpriteTrampolineLineDown);
 }
-

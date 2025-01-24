@@ -19,6 +19,8 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 	PLATFORMER2D_API UClass* Z_Construct_UClass_APlatformer2DCharacter_NoRegister();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_UAnimationComponent_NoRegister();
 	PLATFORMER2D_API UClass* Z_Construct_UClass_UCharacterGameComponent_NoRegister();
+	PLATFORMER2D_API UClass* Z_Construct_UClass_UDeathComponent_NoRegister();
+	PLATFORMER2D_API UClass* Z_Construct_UClass_UHealthComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Platformer2D();
 // End Cross Module References
 	void APlatformer2DCharacter::StaticRegisterNativesAPlatformer2DCharacter()
@@ -56,6 +58,14 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimationComponent;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealthComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthComponent;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MovementAction_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_MovementAction;
@@ -63,6 +73,10 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ClimbAction_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ClimbAction;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InputMappingContext_MetaData[];
 #endif
@@ -131,6 +145,22 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_AnimationComponent = { "AnimationComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlatformer2DCharacter, AnimationComponent), Z_Construct_UClass_UAnimationComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_AnimationComponent_MetaData), Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_AnimationComponent_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_DeathComponent_MetaData[] = {
+		{ "Category", "Platformer2D|Actor Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Platformer2DCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_DeathComponent = { "DeathComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlatformer2DCharacter, DeathComponent), Z_Construct_UClass_UDeathComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_DeathComponent_MetaData), Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_DeathComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_HealthComponent_MetaData[] = {
+		{ "Category", "Platformer2D|Actor Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Platformer2DCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_HealthComponent = { "HealthComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlatformer2DCharacter, HealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_HealthComponent_MetaData), Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_HealthComponent_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_MovementAction_MetaData[] = {
 		{ "Category", "Controls|Input Actions" },
 		{ "ModuleRelativePath", "Public/Platformer2DCharacter.h" },
@@ -144,6 +174,13 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlatformer2DCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_JumpAction_MetaData), Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_JumpAction_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_ClimbAction_MetaData[] = {
+		{ "Category", "Controls|Input Actions" },
+		{ "ModuleRelativePath", "Public/Platformer2DCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_ClimbAction = { "ClimbAction", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlatformer2DCharacter, ClimbAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_ClimbAction_MetaData), Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_ClimbAction_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_InputMappingContext_MetaData[] = {
 		{ "Category", "Controls|Input Actions" },
@@ -164,8 +201,11 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_SceneComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_CharacterGameComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_AnimationComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_DeathComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_HealthComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_MovementAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_JumpAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_ClimbAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_InputMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlatformer2DCharacter_Statics::NewProp_InputMappingPriority,
 	};
@@ -207,9 +247,9 @@ void EmptyLinkFunctionForGeneratedCodePlatformer2DCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_liam__OneDrive_Desktop_Unreal_Projects_2DPlatformerUE5_Platformer2D_Source_Platformer2D_Public_Platformer2DCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APlatformer2DCharacter, APlatformer2DCharacter::StaticClass, TEXT("APlatformer2DCharacter"), &Z_Registration_Info_UClass_APlatformer2DCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlatformer2DCharacter), 2407835992U) },
+		{ Z_Construct_UClass_APlatformer2DCharacter, APlatformer2DCharacter::StaticClass, TEXT("APlatformer2DCharacter"), &Z_Registration_Info_UClass_APlatformer2DCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlatformer2DCharacter), 3207505043U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_liam__OneDrive_Desktop_Unreal_Projects_2DPlatformerUE5_Platformer2D_Source_Platformer2D_Public_Platformer2DCharacter_h_46808234(TEXT("/Script/Platformer2D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_liam__OneDrive_Desktop_Unreal_Projects_2DPlatformerUE5_Platformer2D_Source_Platformer2D_Public_Platformer2DCharacter_h_1926776035(TEXT("/Script/Platformer2D"),
 		Z_CompiledInDeferFile_FID_Users_liam__OneDrive_Desktop_Unreal_Projects_2DPlatformerUE5_Platformer2D_Source_Platformer2D_Public_Platformer2DCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_liam__OneDrive_Desktop_Unreal_Projects_2DPlatformerUE5_Platformer2D_Source_Platformer2D_Public_Platformer2DCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

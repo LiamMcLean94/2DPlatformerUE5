@@ -13,7 +13,7 @@ UCLASS()
 class PLATFORMER2D_API AFallingInteraction : public AParentActorInteraction
 {
 	GENERATED_BODY()
-
+public:
 	AFallingInteraction();
 
 private:

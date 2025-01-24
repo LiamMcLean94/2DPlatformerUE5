@@ -42,16 +42,17 @@ void UAnimationComponent::UpdateControlRotation()
 
 void UAnimationComponent::AnimationStateMachine()
 {
-	DeadAnimation();
-	AttackAnimation();
-	JumpAnimation();
-	FallAnimation();
-	RunAnimation();
+	if (DeadAnimation()) return;
+	if (AttackAnimation()) return;
+	if (JumpAnimation()) return;
+	if (FallAnimation()) return;
+	if (ClimbAnimation()) return;
+	if (RunAnimation()) return;
 }
 
 bool UAnimationComponent::RunAnimation()
 {
-	if (CurrentCharacter)
+	if (CurrentCharacter && !ClimbAnimation() && !JumpAnimation() && !FallAnimation())
 	{
 		float Velocity = CurrentCharacter->GetCharacterMovement()->Velocity.Length();
 		bool bFalling = CurrentCharacter->GetCharacterMovement()->IsFalling();
@@ -71,7 +72,7 @@ bool UAnimationComponent::RunAnimation()
 
 bool UAnimationComponent::JumpAnimation()
 {
-	if (CurrentCharacter)
+	if (CurrentCharacter && !ClimbAnimation())
 	{
 		if (UCharacterGameComponent* CharacterGameComponent = Owner->FindComponentByClass<UCharacterGameComponent>())
 		{
@@ -99,6 +100,37 @@ bool UAnimationComponent::FallAnimation()
 	}
 	return false;
 }
+
+bool UAnimationComponent::ClimbAnimation()
+{
+	if (CurrentCharacter)
+	{
+		if (UCharacterGameComponent* CharacterGameComponent = CurrentCharacter->FindComponentByClass<UCharacterGameComponent>())
+		{
+			if (CharacterGameComponent->OnLadder())
+			{
+				
+				const float Velocity = CurrentCharacter->GetCharacterMovement()->Velocity.Size();
+				
+				if (Velocity > 0.f)
+				{
+					CharacterState = ECharacterState::Climb;
+					
+				}
+				else
+				{
+					CharacterState = ECharacterState::IdleClimb;
+					
+				}
+				return true;
+			}
+	
+		}
+	}
+	return false;
+}
+
+
 
 bool UAnimationComponent::AttackAnimation()
 {

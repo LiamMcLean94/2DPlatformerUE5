@@ -5,9 +5,12 @@
 
 #include "AnimationComponent.h"
 #include "CharacterGameComponent.h"
+#include "DeathComponent.h"
 #include "Camera/CameraComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "HealthComponent.h"
+#include "PlayerStatWidget.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Slate/SGameLayerManager.h"
 
@@ -24,6 +27,9 @@ APlatformer2DCharacter::APlatformer2DCharacter()
 
 	CharacterGameComponent = CreateDefaultSubobject<UCharacterGameComponent>(TEXT("Character"));
 	AnimationComponent = CreateDefaultSubobject<UAnimationComponent>(TEXT("Animation"));
+
+	DeathComponent = CreateDefaultSubobject<UDeathComponent>(TEXT("Death"));
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
 }
 
 void APlatformer2DCharacter::BeginPlay()
@@ -54,6 +60,15 @@ void APlatformer2DCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 				&APlatformer2DCharacter::EnhancedMove);
 		}
 
+		if (ClimbAction)
+		{
+			PlayerEnhancedInputComponent->BindAction(
+				ClimbAction,
+				ETriggerEvent::Triggered,
+				this,
+				&APlatformer2DCharacter::EnhancedClimb);
+		}
+
 		if (JumpAction)
 		{
 			PlayerEnhancedInputComponent->BindAction(
@@ -69,6 +84,32 @@ void APlatformer2DCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 		}
 	}
 	
+}
+
+float APlatformer2DCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent,
+	class AController* EventInstigator, AActor* DamageCauser)
+{
+	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+	if (HealthComponent)
+	{
+		float UpdatedHealth = HealthComponent->TakeDamage(ActualDamage);
+
+		if (UpdatedHealth == 0.f)
+		{
+			CharacterGameComponent->RespawnCharacter(CharacterGameComponent->GetRespawnLocation(), true);
+			UpdatedHealth = HealthComponent->GetHealth();
+		}
+
+		float MaxHealth = HealthComponent->GetDefaultHealth();
+		
+		if (CharacterGameComponent)
+		{
+			CharacterGameComponent->GetPlayerStatWidget()->UpdateHealthBar(UpdatedHealth,MaxHealth);
+		}
+	}
+	
+	return ActualDamage;
 }
 
 void APlatformer2DCharacter::PawnClientRestart()
@@ -100,6 +141,14 @@ void APlatformer2DCharacter::EnhancedJump(const FInputActionValue& Value)
 	{
 		Super::Jump();
 		CharacterGameComponent->Jump();
+	}
+}
+
+void APlatformer2DCharacter::EnhancedClimb(const FInputActionValue& Value)
+{
+	if (CharacterGameComponent)
+	{
+		CharacterGameComponent->MoveUpAndDown(Value);
 	}
 }
 
